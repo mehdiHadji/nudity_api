@@ -1,0 +1,15 @@
+version: "2"
+services:
+  python-service-app_snapshot:
+    image: python-service-app_snapshot
+    build:
+      context: ./
+    ports:
+      - "5001:5001"
+    container_name: python-service-app_snapshot
+    restart: always
+    networks:
+      - python-service-app_snapshot
+
+networks:
+  python-service-app_snapshot:
